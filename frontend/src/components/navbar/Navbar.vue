@@ -1,49 +1,15 @@
 <script setup>
-	import {
-		NavigationMenu,
-		NavigationMenuContent,
-		NavigationMenuItem,
-		NavigationMenuLink,
-		NavigationMenuList,
-		NavigationMenuTrigger,
-		navigationMenuTriggerStyle
-	} from "@/components/ui/navigation-menu"
 	import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 	import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 </script>
 <template>
 	<header class="flex-shrink-0 w-full h-16 flex px-8">
 		<nav class="flex gap-4 h-full flex-grow me-auto">
-			<router-link
-				:to="{ name: 'dashboard' }"
-				class="translate-y-[1px] flex items-center text-slate-700 hover:text-slate-900 border-b hover:border-slate-700"
-				exactActiveClass="border-sky-500 hover:border-sky-500 text-sky-500 hover:text-sky-500">
-				Dashboard
-			</router-link>
-			<router-link
-				:to="{ name: 'direktori' }"
-				class="translate-y-[1px] flex items-center text-slate-700 hover:text-slate-900 border-b hover:border-slate-700"
-				exactActiveClass="border-sky-500 hover:border-sky-500 text-sky-500 hover:text-sky-500">
-				Direktori
-			</router-link>
-			<router-link
-				:to="{ name: 'post' }"
-				class="translate-y-[1px] flex items-center text-slate-700 hover:text-slate-900 border-b hover:border-slate-700"
-				exactActiveClass="border-sky-500 hover:border-sky-500 text-sky-500 hover:text-sky-500">
-				Post
-			</router-link>
-			<router-link
-				:to="{ name: 'ekstrakulikuler' }"
-				class="translate-y-[1px] flex items-center text-slate-700 hover:text-slate-900 border-b hover:border-slate-700"
-				exactActiveClass="border-sky-500 hover:border-sky-500 text-sky-500 hover:text-sky-500">
-				Ekstrakulikuler
-			</router-link>
-			<router-link
-				:to="{ name: 'post' }"
-				class="translate-y-[1px] flex items-center text-slate-700 hover:text-slate-900 border-b hover:border-slate-700"
-				exactActiveClass="border-sky-500 hover:border-sky-500 text-sky-500 hover:text-sky-500">
-				Setting
-			</router-link>
+			<router-link :to="{ name: 'dashboard' }" class="flex items-center text-slate-500 hover:text-slate-700" activeClass="text-slate-900"> Dashboard </router-link>
+			<router-link :to="{ name: 'direktori' }" class="flex items-center text-slate-500 hover:text-slate-700" activeClass="text-slate-900"> Direktori </router-link>
+			<router-link :to="{ name: 'post' }" class="flex items-center text-slate-500 hover:text-slate-700" activeClass="text-slate-900"> Post </router-link>
+			<router-link :to="{ name: 'ekstrakulikuler' }" class="flex items-center text-slate-500 hover:text-slate-700" activeClass="text-slate-900"> Ekstrakulikuler </router-link>
+			<router-link :to="{ name: 'post' }" class="flex items-center text-slate-500 hover:text-slate-700" activeClass="text-slate-900"> Setting </router-link>
 		</nav>
 		<div class="flex-shrink-0 content-center">
 			<DropdownMenu>
